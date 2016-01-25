@@ -42,15 +42,15 @@ func (this *Apriori) result(confItemset2 [][]string) {
 		var ret string
 		j := 0
 		for j = 0; j < len(confItemset2[i])-3; j++ {
-			ret +=confItemset2[i][j]+" "
+			ret += confItemset2[i][j] + " "
 		}
 
-		ret+="---> "
-		ret+=confItemset2[i][j]+" "
+		ret += "---> "
+		ret += confItemset2[i][j] + " "
 		j++
-		ret+="相对支持度: "+confItemset2[i][j]
+		ret += "相对支持度: " + confItemset2[i][j]
 		j++
-		ret+=", 自信度: "+confItemset2[i][j]
+		ret += ", 自信度: " + confItemset2[i][j]
 		j++
 		log.Println(ret)
 	}

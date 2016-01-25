@@ -2,7 +2,6 @@ package Apriori
 
 import (
 	"testing"
-	"log"
 )
 
 func TestApriori(t *testing.T) {
@@ -14,10 +13,10 @@ func TestApriori(t *testing.T) {
 		return
 	}
 
-	log.Println(apriori.record)
+
 
 	cItemSet := apriori.findFirstCandidate()          // 获取第一次的备选集
-	log.Println(cItemSet)
+
 	lItemSet := apriori.getSupportedItemSet(cItemSet) //获取备选集cItemset满足支持的集合
 
 	for !apriori.endTag {
